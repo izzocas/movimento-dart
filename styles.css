@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Futura', sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body:not(.produtos) {
+  background-color: #ece4e4;
+  background-image: url(imagens/Copilot_20250616_014638.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;
+  border-bottom: 1px solid #ffffff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.cta-button {
+  margin-top: 480px;
+  margin-left: 200px;
+  text-align: left;
+}
+
+.cta-button a {
+  background-color: #a76742;
+  color: white;
+  padding: 16px 32px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+  background-color: #7a553f;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+  padding: 1rem;
+  margin: 1rem 0 0.5rem 0;
+  background: rgba(255, 82, 51, 0.05);
+}
+
+/* SOBRE NÓS */
+.sobrenos {
+  margin-top: 100px;
+  background-color: #ece4e4;
+}
+
+.sobrenos .imagemog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; 
+  padding: 20px;
+  background-color: #ece4e4;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.sobrenos .imagemdois {
+  flex-direction: row-reverse;
+  margin-top: -20px;
+}
+
+.sobrenos .imagemog:first-of-type img {
+  width: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.sobrenos .imagemog:first-of-type {
+  gap: 100px;
+}
+
+
+.sobrenos .imagemdois img {
+  width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.sobrenos .conteudo {
+  max-width: 500px;
+  background-color: #ece4e4;
+}
+
+.sobrenos .conteudo h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sobrenos .conteudo p {
+  font-size: 1.08rem;
+  color: #696868;
+  line-height: 1.7;
+}
+
+/* FEEDBACK */
+.feedback-form {
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #ece4e4;
+}
+
+.feedback-form h2 {
+  font-size: 2rem;
+  color: #333;
+  padding-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.feedback-form textarea {
+  width: 80%;
+  max-width: 500px;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #a76742;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #7a553f;
+}
+
+body.produtos {
+  background-color: #ece4e4;
+  height: auto;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.single-galeria {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.single-galeria .img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+.single-galeria:hover .img img {
+  transform: scale(1.05);
+}
+
+.single-galeria .overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.single-galeria:hover .overflow {
+  opacity: 1;
+}
+
+.single-galeria .conteudo {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: white;
+  z-index: 2;
+}
+
+.wg2 {
+  grid-column: span 2;
+}
+
+.hg2 {
+  grid-row: span 2;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .wg2, .hg2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .single-galeria .conteudo h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* REDES SOCIAIS */
+.section {
+  background-color: #ece4e4;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.social-btns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.social-btns li a {
+  font-size: 30px;
+  color: #fff;
+  background-color: #a76742;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+  text-decoration: none;
+}
+
+.social-btns li a:hover {
+  transform: scale(1.1);
+  background-color: #7a553f;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .sobrenos .imagemog {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sobrenos .imagemog img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .sobrenos .conteudo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: auto;
+  }
+
+  .cta-button a {
+    font-size: 24px;
+    padding: 12px 24px;
+  }
+
+  .sobrenos .imagemog {
+    padding: 20px 0;
+  }
+
+  .sobrenos .conteudo {
+    padding: 0 10px;
+  }
+
+  .feedback-form textarea,
+  .feedback-form button {
+    width: 90%;
+  }
+}
